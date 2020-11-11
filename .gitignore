@@ -1,0 +1,6 @@
+*.swp
+*.swo
+a.out
+prog
+*.pdf
+main.c
