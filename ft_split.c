@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 22:45:05 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/10 22:45:07 by adenhez          ###   ########.fr       */
+/*   Updated: 2020/11/11 22:10:51 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,20 @@ static int	size_word(const char *s, int i, char c)
 	return (n);
 }
 
+static char	**free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i] != NULL)
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+	return (NULL);
+}
+
 char		**ft_split(const char *s, char c)
 {
 	char	**tab;
@@ -66,7 +80,7 @@ char		**ft_split(const char *s, char c)
 		while (s[k] == c)
 			k++;
 		if (!(tab[i] = malloc(sizeof(char) * (size_word(s, k, c) + 1))))
-			return (NULL);
+			return (free_tab(tab));
 		j = 0;
 		while (s[k] != c && s[k] != 0)
 			tab[i][j++] = s[k++];
