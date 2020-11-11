@@ -40,7 +40,6 @@ SRCS         = ft_memset.c \
 			  ft_strcapitalize.c \
 			  ft_strlowcase.c \
 			  ft_strupcase.c \
-			  ft_itoa_base.c
 
 BONUS_SRCS    = ft_lstnew.c \
               ft_lstadd_front.c \
