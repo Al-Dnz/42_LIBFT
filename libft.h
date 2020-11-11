@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 00:07:10 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/11 11:46:50 by adenhez          ###   ########.fr       */
+/*   Updated: 2020/11/11 22:27:13 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int					ft_isspace(char c);
 char				*ft_strcapitalize(char *str);
 char				*ft_strupcase(char *str);
 char				*ft_strlowcase(char *str);
-char				*ft_itoa_base(int n, int base);
 
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(const char *s1);
