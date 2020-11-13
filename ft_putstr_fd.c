@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 22:44:51 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/10 22:44:52 by adenhez          ###   ########.fr       */
+/*   Updated: 2020/11/12 15:34:49 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s || fd < 0 || fd > 2)
+		return ;
 	while (*s)
 		write(fd, s++, 1);
 }

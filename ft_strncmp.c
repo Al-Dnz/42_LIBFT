@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 21:15:46 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/11 00:04:02 by adenhez          ###   ########.fr       */
+/*   Updated: 2020/11/12 15:43:43 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (i < n - 1 && s1[i] && s2[i])
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+			break ;
 		i++;
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);

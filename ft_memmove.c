@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 23:09:00 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/08 23:10:04 by adenhez          ###   ########.fr       */
+/*   Updated: 2020/11/13 12:10:04 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	s1 = (unsigned char *)dst;
 	s2 = (unsigned char *)src;
+	if (!len || dst == src)
+		return (dst);
 	if (s2 < s1)
 	{
 		while (++i <= len)

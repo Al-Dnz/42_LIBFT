@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 22:44:19 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/10 22:44:21 by adenhez          ###   ########.fr       */
+/*   Updated: 2020/11/12 15:35:54 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s || fd < 0 || fd > 2)
+		return ;
 	while (*s)
 		write(fd, s++, 1);
 	write(fd, "\n", 1);
