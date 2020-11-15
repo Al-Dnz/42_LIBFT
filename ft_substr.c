@@ -6,7 +6,7 @@
 /*   By: adenhez <adenhez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 23:08:41 by adenhez           #+#    #+#             */
-/*   Updated: 2020/11/14 14:50:58 by adenhez          ###   ########.fr       */
+/*   Updated: 2020/11/15 13:04:27 by adenhez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	while (s[i])
 		i++;
-	i = start > i ? len : i;
+	i = i - start < len ? i - start : len;
 	if (!(str = malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	i = 0;
